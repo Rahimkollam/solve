@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+		#box {
+			width: 100%;
+			height:auto;
+			border-width: 2px;
+			border-style:solid;
+			border-color:red;
+			background: #CCC;
+		}
+		#box1 {
+			width: 900px;
+			height:auto;
+			border-width: 2px;
+			border-style:solid;
+			border-color:green;
+			background:lightblue;
+			
+		}
+
+
+body {
+	background-image: url(" ");
+        background-repeat:no-repeat;
+       background-size:cover;
+} 
+
+
+
+table, td, th {
+  border:0px solid black;
+}
+</style>
+
+
+</head>
+<body><center><h2><i><font color="blue">Pension Order</font><br></i></h2><hr color="green">
+<a href="2.pdf"> <button> Tappal </button> </a>
+<font face="AnjaliOldLipi">
+<div class="row" style="margin-top:5px;">
+<div class="col-md-4"></div>
+<div class="col-md-6">
+
+<table class="table table-bordered differentTable">
+<tbody><tr style="background-color:#EDC00C;color:blue;font-size:18px;">
+
+<td>റിപ്പോർട്ട് നമ്പർ :</td><td><input type="text" id="rno" placeholder="ഫയൽ നമ്പർ" name="number" value="32423"></td>
+</tr>
+
+
+
+<tr style="background-color:#EDC00C;color:blue;font-size:18px;">
+
+<td>റിപ്പോർട്ട് തീയതി :</td><td><input type="text" id="rdt" placeholder="ഫയൽ നമ്പർ" name="number" value="324"></td>
+</tr>
+
+<tr style="background-color:#EDC00C;color:blue;font-size:18px;">
+
+<td>വില്ലേജാഫീസ് :</td><td><select id="vo" name="vo">
+    <option value="പട്ടാഴി വടക്കേക്കര">പട്ടാഴി വടക്കേക്കര</option>
+    <option value="പട്ടാഴി">പട്ടാഴി</option>
+    <option value="തലവൂർ">തലവൂർ</option>
+    <option value="പിടവൂർ">പിടവൂർ</option>
+<option value="പത്തനാപുരം">പത്തനാപുരം</option>
+<option value="പുന്നല">പുന്നല</option>
+<option value="പിറവന്തൂർ">പിറവന്തൂർ</option>
+<option value="വിളക്കുടി">വിളക്കുടി</option>
+
+  </select></td>
+</tr>
+
+
+
+
+
+
+
+
+</tbody></table></font>
+<hr color="green">
+ 
+</div>
+
+
+<br><input type="button" onclick="getarea()" value="സമർപ്പിക്കുക "><br></div></center>
+ 
+
+<script>
+function refreshPage(){
+    window.location.reload();
+} 
+function printContent(el){
+var restorepage = document.body.innerHTML;
+var printcontent = document.getElementById(el).innerHTML;
+document.body.innerHTML = printcontent;
+window.print();
+document.body.innerHTML = printcontent;
+}
+function getarea(){
+var a = document.getElementById("rno").value;
+var b = document.getElementById("rdt").value;
+var c = document.getElementById("vo").value;
+
+document.getElementById("output").innerHTML="<font face=AnjaliOldLipi><table style=width:100%;><tr><td  align=left width=3%> </td><td  align=left width=37%> നമ്പർ-"+a+"</td><td width=50%><center></center></td><td width=10%><left></left></td></tr></table><table style=width:100%;><tr><td  align=right width=10%><left></left></td><td  align=right width=20%><left></left></td><td width=30%><center></center></td><td  align=right width=35%>"+c+"</td><td  align=right width=5%></td></tr></table><table style=width:100%;><tr><td  align=right width=10%><left></left></td><td  align=right width=20%><left></left></td><td width=30%><center></center></td><td  align=right width=35%>"+b+"</td><td  align=right width=5%></td></tr></table><br><table style=width:100%;><tr><td  align=right width=15%><b>പ്രേക്ഷിതൻ,</td><td  align= left width=35%></td><td width=30%><center></center></td><td width=20%><left></left></td></tr></table><table style=width:100%;><tr><td  align=right width=15%><b></td><td  align= left width=35%>വില്ലേജാഫീസർ ,</td><td width=30%><center></center></td><td width=20%><left></left></td></tr></table><table style=width:100%;><tr><td  align=right width=15%></td><td  align= left width=35%>വില്ലേജാഫീസ് , </td><td width=30%><center></center></td><td width=20%><left></left></td></tr></table><table style=width:100%;><tr><td  align=right width=15%><left></left></td><td  align= left width=35%>"+c+". </td><td width=30%><center></center></td><td width=20%><left></left></td></tr></table><br><br><table style=width:100%;><tr><td  align=right width=20%><b>സ്വീകർത്താവ് ,</td><td  align= left width=35%> </td><td width=30%><center></center></td><td width=15%><left></left></td></tr></table><table style=width:100%;><tr><td  align=right width=20%><left></left></td><td  align= left width=35%>തഹസീൽദാർ ( ഭൂരേഖ), </td><td width=30%><center></center></td><td width=15%><left></left></td></tr></table><table style=width:100%;><tr><td  align=right width=20%><left></left></td><td  align= left width=35%>താലൂക്കാഫീസ് ,</td><td width=30%><center></center></td><td width=15%><left></left></td></tr></table><table style=width:100%;><tr><td  align=right width=20%><left></left></td><td  align= left width=35%>പത്തനാപുരം. </td><td width=30%><center></center></td><td width=15%><left></left></td></tr></table><br><br><table style=width:100%;><tr><td  align=right width=25%>വിഷയം:-</td><td  align= left width=75%>കെ എൽ ആർ നിയമം - 1963 ഭൂസ്വത്ത് വിവരം സംബന്ധിച്ച്</td><td width=0%><center></center></td><td width=0%><left></left></td></tr></table><table style=width:100%;><tr><td  align=right width=25%>സൂചന:-</td><td  align= left width=75%>1 കൊല്ലം ജില്ലാ കളക്ടറുടെ 22 - 3 -19 ലെ L7-12474/19 നമ്പർ കത്ത്</td><td width=0%><center></center></td><td width=0%><left></left></td></tr></table><table style=width:100%;><tr><td  align=right width=25%></td><td  align= left width=75%>2 പത്തനാപുരം താലൂക്കാഫീസിലെ ബി4 - 2439/2019  ലെ കത്ത്</td><td width=0%><center></center></td><td width=0%><left></left></td></tr></table><br><br><table style=width:100%;><tr><td  align=right width=10%><left></left></td><td  text-align: justify; width=888%>&nbsp;&nbsp;&nbsp;&nbsp;സൂചനയിലേക്ക് അങ്ങയുടെ ശ്രദ്ധ ക്ഷണിച്ചു കൊള്ളുന്നു . ജി കെ ഗ്രാനൈറ്റ് , ക്രിസ്റ്റൽ ഗ്രാനൈറ്റ് എന്നീ സ്ഥാപനങ്ങളുടെ പേരിൽ ഈ വില്ലേജിൽ ഭൂസ്വത്തുക്കൾ ഇല്ലെന്ന വിവരം മേൽ നടപടിയ്ക്കായി റിപ്പോർട്ടു ചെയ്യതു കൊള്ളുന്നു  </td><td width=1%><center></center></td><td width=1%><left></left></td></tr></table><br><br><table style=width:100%;><tr><td  align=right width=30%></td><td  align=right width=30%></td><td width=25%> <center> വില്ലേജാഫീസർ</center></td><td width=1%><left></left></td></tr></table><table style=width:100%;><tr><td  align=right width=30%></td><td  align=right width=30%></td><td width=25%><center>"+c+"</center></td><td width=1%><left></left></td></tr></table></font>"
+
+
+
+
+
+
+//document.write("<br><br><center>Area ="+c+"m<sup>2</sup>");
+}
+
+</script>
+
+
+<center>
+
+<div id="box">
+<p id="output"></p> 
+
+<button onclick="printContent('output')">printContent</button></div></center><br>
+
+
+<center><font color="blue">Rahim M-9961570858</font></center>
+
+
+</body></html>
